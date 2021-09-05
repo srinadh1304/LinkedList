@@ -13,5 +13,6 @@ public class LinkedList {
 
 		System.out.println("Created a linked list :");
 		myLinkedList.printMyNodes();
+		System.out.println("Removing the first element: "+myLinkedList.pop().getKey());
 	}
 }

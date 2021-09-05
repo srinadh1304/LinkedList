@@ -54,6 +54,13 @@ public class MyLinkedList {
 		prevNode.setNext(newNode);
 		newNode.setNext(tempNode);
 	}
+	
+	public INode pop(){
+		INode tempNode = this.head;
+		this.head = this.head.getNext();
+		return tempNode;
+	}
+	
 	public void printMyNodes() {
 		INode tempNode = this.head;
 		while(tempNode != null) {
