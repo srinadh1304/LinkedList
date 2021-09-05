@@ -5,16 +5,13 @@ public class LinkedList {
 		MyNode<Integer> firstNode = new MyNode<Integer>(56);
 		MyNode<Integer> secondNode = new MyNode<Integer>(30);
 		MyNode<Integer> thirdNode = new MyNode<Integer>(70);
-
-		firstNode.setNext(secondNode);
-		secondNode.setNext(thirdNode);
+		
+		MyLinkedList myLinkedList = new MyLinkedList();
+		myLinkedList.add(firstNode);
+		myLinkedList.add(secondNode);
+		myLinkedList.add(thirdNode);
 
 		System.out.println("Created a linked list :");
-		INode<Integer> tempNode = firstNode;
-		while(tempNode != null) {
-			System.out.print(tempNode.getKey()+" -> ");
-			tempNode = tempNode.getNext();
-		}
-		System.out.println("null");
+		myLinkedList.printMyNodes();
 	}
 }
