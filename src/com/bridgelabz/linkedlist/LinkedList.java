@@ -7,9 +7,9 @@ public class LinkedList {
 		MyNode<Integer> thirdNode = new MyNode<Integer>(70);
 		
 		MyLinkedList myLinkedList = new MyLinkedList();
-		myLinkedList.add(firstNode);
-		myLinkedList.add(secondNode);
-		myLinkedList.add(thirdNode);
+		myLinkedList.append(firstNode);
+		myLinkedList.append(secondNode);
+		myLinkedList.append(thirdNode);
 
 		System.out.println("Created a linked list :");
 		myLinkedList.printMyNodes();
