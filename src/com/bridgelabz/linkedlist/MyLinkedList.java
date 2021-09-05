@@ -66,19 +66,22 @@ public class MyLinkedList {
 		return tempNode;
 	}
 	
-	public int search(INode key) {
+	public INode search(INode key) {
 		int position = 0;
 		INode tempNode = this.head;
 		while(tempNode != null) {
 			if(tempNode.getKey() == key.getKey()) {
-				return position+1;
+				return tempNode;
 			}
 			tempNode = tempNode.getNext();
 			position++;
 		}
-		return -1;
+		return null;
 	}
-	
+	public void searchAndInsert(INode previousNode, INode nodeToBeInserted) {
+		INode tempNode = search(previousNode);
+		insert(tempNode, nodeToBeInserted);
+	}
 	public void printMyNodes() {
 		INode tempNode = this.head;
 		while(tempNode != null) {

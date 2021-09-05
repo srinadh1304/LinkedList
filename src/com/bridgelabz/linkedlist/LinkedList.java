@@ -13,9 +13,9 @@ public class LinkedList {
 
 		System.out.println("Created a linked list :");
 		myLinkedList.printMyNodes();
-		if(myLinkedList.search(secondNode)!=-1)
-			System.out.println("Element found at position: "+myLinkedList.search(secondNode));
-		else
-			System.out.println("Element not found");
+		MyNode<Integer> fourthNode=new MyNode<Integer>(40);
+		myLinkedList.searchAndInsert(secondNode, fourthNode);
+		myLinkedList.printMyNodes();
+		
 	}
 }
