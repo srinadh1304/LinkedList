@@ -60,7 +60,11 @@ public class MyLinkedList {
 		this.head = this.head.getNext();
 		return tempNode;
 	}
-	
+	public INode popLast(){
+		INode tempNode = this.tail;
+		this.tail = null;
+		return tempNode;
+	}
 	public void printMyNodes() {
 		INode tempNode = this.head;
 		while(tempNode != null) {
