@@ -74,13 +74,36 @@ public class MyLinkedList {
 				return tempNode;
 			}
 			tempNode = tempNode.getNext();
-			position++;
 		}
 		return null;
 	}
 	public void searchAndInsert(INode previousNode, INode nodeToBeInserted) {
 		INode tempNode = search(previousNode);
 		insert(tempNode, nodeToBeInserted);
+	}
+	
+	public int getSize() {
+		int count = 0;
+		INode tempNode = this.head;
+		while(tempNode != null) {
+			count++;
+			tempNode = tempNode.getNext();
+		}
+		return count;
+	}
+	
+	public INode deleteNode(INode nodeToBeDeleted)
+	{
+		INode tempNode=this.head;
+		while(tempNode.getNext() != null) {
+			if(tempNode.getNext().getKey() == nodeToBeDeleted.getKey()) {
+				INode deletedNode = tempNode.getNext();
+				tempNode.setNext(deletedNode.getNext());
+				return deletedNode;
+			}
+			tempNode = tempNode.getNext();
+		}
+		return null;
 	}
 	public void printMyNodes() {
 		INode tempNode = this.head;

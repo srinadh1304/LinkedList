@@ -16,6 +16,9 @@ public class LinkedList {
 		MyNode<Integer> fourthNode=new MyNode<Integer>(40);
 		myLinkedList.searchAndInsert(secondNode, fourthNode);
 		myLinkedList.printMyNodes();
-		
+		System.out.println("Size of the linked list: "+myLinkedList.getSize());
+		System.out.println("Deleted node: "+fourthNode.getKey());
+		myLinkedList.deleteNode(fourthNode);
+		myLinkedList.printMyNodes();
 	}
 }
