@@ -49,6 +49,11 @@ public class MyLinkedList {
 			
 		}
 	}
+	public void insert(INode prevNode , INode newNode) {
+		INode tempNode = prevNode.getNext();
+		prevNode.setNext(newNode);
+		newNode.setNext(tempNode);
+	}
 	public void printMyNodes() {
 		INode tempNode = this.head;
 		while(tempNode != null) {

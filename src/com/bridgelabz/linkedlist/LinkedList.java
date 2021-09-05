@@ -5,11 +5,11 @@ public class LinkedList {
 		MyNode<Integer> firstNode = new MyNode<Integer>(56);
 		MyNode<Integer> secondNode = new MyNode<Integer>(30);
 		MyNode<Integer> thirdNode = new MyNode<Integer>(70);
-		
+
 		MyLinkedList myLinkedList = new MyLinkedList();
 		myLinkedList.append(firstNode);
-		myLinkedList.append(secondNode);
 		myLinkedList.append(thirdNode);
+		myLinkedList.insert(firstNode,secondNode);
 
 		System.out.println("Created a linked list :");
 		myLinkedList.printMyNodes();
