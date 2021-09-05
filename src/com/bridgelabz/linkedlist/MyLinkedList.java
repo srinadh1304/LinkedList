@@ -65,6 +65,20 @@ public class MyLinkedList {
 		this.tail = null;
 		return tempNode;
 	}
+	
+	public int search(INode key) {
+		int position = 0;
+		INode tempNode = this.head;
+		while(tempNode != null) {
+			if(tempNode.getKey() == key.getKey()) {
+				return position+1;
+			}
+			tempNode = tempNode.getNext();
+			position++;
+		}
+		return -1;
+	}
+	
 	public void printMyNodes() {
 		INode tempNode = this.head;
 		while(tempNode != null) {

@@ -13,6 +13,9 @@ public class LinkedList {
 
 		System.out.println("Created a linked list :");
 		myLinkedList.printMyNodes();
-		System.out.println("Removing the Last element: "+myLinkedList.popLast().getKey());
+		if(myLinkedList.search(secondNode)!=-1)
+			System.out.println("Element found at position: "+myLinkedList.search(secondNode));
+		else
+			System.out.println("Element not found");
 	}
 }
